@@ -149,9 +149,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="swL-0K-Puc">
-                                                    <rect key="frame" x="8" y="8" width="584" height="344"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="300"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="344" id="PH4-iP-DqG"/>
+                                                        <constraint firstAttribute="height" constant="300" id="PH4-iP-DqG"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evf-Rg-yHV" userLabel="Like">
