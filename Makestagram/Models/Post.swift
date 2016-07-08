@@ -15,6 +15,7 @@ import ConvenienceKit
 
 class Post: PFObject, PFSubclassing {
 
+    dynamic var content = ""
     var image : Observable<UIImage?> = Observable(nil)
     var likes : Observable<[PFUser]?> = Observable(nil)
     var photoUploadTask : UIBackgroundTaskIdentifier?

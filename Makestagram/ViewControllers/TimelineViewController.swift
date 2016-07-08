@@ -40,6 +40,7 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
             let post = Post()
             post.image.value = image
             post.uploadPost()
+            self.showCaptionActionSheetForPost(post)
         }
     }
 
@@ -57,6 +58,25 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     }
     
     // MARK: UIActionSheets
+    
+    func showCaptionActionSheetForPost(post: Post){
+        let alertController = UIAlertController(title: nil, message: "Where do you want to get your caption from?", preferredStyle: .ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let newCaptionAction = UIAlertAction(title: "Choose new caption", style: .Default) { (action) in
+        
+        }
+        alertController.addAction(newCaptionAction)
+        
+        let captionFromNotesAction = UIAlertAction(title: "Choose caption from notes", style: .Default) { (action) in
+        
+        }
+        alertController.addAction(captionFromNotesAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     
     func showActionSheetForPost(post: Post) {
         if (post.user == PFUser.currentUser()) {

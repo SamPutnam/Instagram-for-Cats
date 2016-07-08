@@ -154,8 +154,8 @@
                                                         <constraint firstAttribute="height" constant="300" id="PH4-iP-DqG"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evf-Rg-yHV" userLabel="Like">
-                                                    <rect key="frame" x="544" y="401" width="44" height="44"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evf-Rg-yHV" userLabel="Like">
+                                                    <rect key="frame" x="544" y="402" width="44" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="4ia-Zj-cOt"/>
                                                         <constraint firstAttribute="width" constant="44" id="t9v-Un-Nes"/>
@@ -167,8 +167,8 @@
                                                         <action selector="likeButonTapped:" destination="Z9U-wI-mCy" eventType="touchUpInside" id="n29-gT-DpG"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXd-qW-ADn" userLabel="More">
-                                                    <rect key="frame" x="8" y="427" width="44" height="44"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXd-qW-ADn" userLabel="More">
+                                                    <rect key="frame" x="8" y="428" width="44" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="44" id="Pxi-L1-Mnt"/>
                                                         <constraint firstAttribute="height" constant="44" id="Z3T-i3-CCh"/>
@@ -178,15 +178,15 @@
                                                         <action selector="moreButtonTapped:" destination="Z9U-wI-mCy" eventType="touchUpInside" id="VTr-iE-d1K"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="6qz-gN-ncS">
-                                                    <rect key="frame" x="20" y="387" width="20" height="20"/>
+                                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="6qz-gN-ncS">
+                                                    <rect key="frame" x="20" y="388" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="BK9-QM-aU2"/>
                                                         <constraint firstAttribute="height" constant="20" id="gns-3E-6hM"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Test User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFZ-0t-emE">
-                                                    <rect key="frame" x="60" y="386" width="434" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFZ-0t-emE">
+                                                    <rect key="frame" x="60" y="387" width="434" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Azx-Xy-Qfh"/>
                                                     </constraints>
@@ -194,8 +194,8 @@
                                                     <color key="textColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="whv-Vy-7uX">
-                                                    <rect key="frame" x="8" y="328" width="584" height="38"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="whv-Vy-7uX">
+                                                    <rect key="frame" x="8" y="328" width="584" height="39"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -225,6 +225,7 @@
                                             <outlet property="likesIconImageView" destination="6qz-gN-ncS" id="YrZ-c1-owK"/>
                                             <outlet property="likesLabel" destination="jFZ-0t-emE" id="Y8o-io-YYq"/>
                                             <outlet property="moreButton" destination="nXd-qW-ADn" id="5OL-Go-By8"/>
+                                            <outlet property="postContentTextView" destination="whv-Vy-7uX" id="xzD-qC-CSL"/>
                                             <outlet property="postImageView" destination="swL-0K-Puc" id="hTc-og-LM0"/>
                                         </connections>
                                     </tableViewCell>
