@@ -11,6 +11,8 @@ target 'Makestagram' do
   pod 'ParseFacebookUtilsV4'
   pod 'ParseUI'
   pod 'DateTools'
+  pod 'Realm'
+  pod 'RealmSwift'
 
   # Pods for Makestagram
 
