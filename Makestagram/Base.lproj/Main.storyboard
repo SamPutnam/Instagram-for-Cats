@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bc4-Ww-aEc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -354,9 +354,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="noteContentPreview" destination="29K-6J-wkh" id="j4O-fl-jMg"/>
-                                    <outlet property="noteModificationTimeLabel" destination="MTr-if-ofm" id="BbP-NR-p3C"/>
-                                    <outlet property="noteTitleLabel" destination="0sV-mI-8BM" id="7Eg-el-YjJ"/>
+                                    <outlet property="noteContentPreview" destination="29K-6J-wkh" id="Lla-0J-LRc"/>
+                                    <outlet property="noteModificationTimeLabel" destination="MTr-if-ofm" id="kdK-Dz-IwW"/>
+                                    <outlet property="noteTitleLabel" destination="0sV-mI-8BM" id="zLF-OT-1sL"/>
                                     <segue destination="mIU-S1-LnQ" kind="show" identifier="displayNote" id="w3s-5Y-7yH"/>
                                 </connections>
                             </tableViewCell>
@@ -419,18 +419,18 @@
                     <navigationItem key="navigationItem" title="Title" id="0Qv-3R-gXA">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="cJk-Vp-m8T">
                             <connections>
-                                <segue destination="1M3-Gc-NP5" kind="unwind" identifier="Cancel" unwindAction="unwindToListNotesViewController:" id="jGh-ze-GAK"/>
+                                <segue destination="1M3-Gc-NP5" kind="unwind" identifier="Cancel" unwindAction="unwindToListNotesViewController:" id="3VM-ue-7Dp"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="nSI-PA-rrW">
                             <connections>
-                                <segue destination="1M3-Gc-NP5" kind="unwind" identifier="Save" unwindAction="unwindToListNotesViewController:" id="6s6-Ti-xbB"/>
+                                <segue destination="1M3-Gc-NP5" kind="unwind" identifier="Save" unwindAction="unwindToListNotesViewController:" id="Dzw-vp-Hdq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="noteContentTextView" destination="ZFR-Ec-NYK" id="iC9-b1-Fnt"/>
-                        <outlet property="noteTitleTextField" destination="qpk-Cm-oeF" id="gta-C0-4iv"/>
+                        <outlet property="noteContentTextView" destination="ZFR-Ec-NYK" id="QCq-pQ-731"/>
+                        <outlet property="noteTitleTextField" destination="qpk-Cm-oeF" id="jpT-Q6-F7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LfI-a5-4Z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -441,7 +441,7 @@
         <!--Navigation Controller-->
         <scene sceneID="e50-TQ-kcA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UuU-ht-IOc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="UuU-ht-IOc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Cj-NO-rkI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -454,7 +454,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcr-xw-KJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1219" y="-731"/>
+            <point key="canvasLocation" x="1308" y="-731"/>
         </scene>
     </scenes>
     <resources>

@@ -28,8 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else  if let  _ = user {
         // if login was successful, display the TabBarController
             let storyboard = UIStoryboard (name: "Main", bundle: nil)
-            let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
-            self.window?.rootViewController!.presentViewController(tabBarController, animated: true, completion: nil)
+            //let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
+            let navigationController = storyboard.instantiateViewControllerWithIdentifier("NavigationController")
+            self.window?.rootViewController!.presentViewController(navigationController, animated: true, completion: nil)
         }
         }
     }
@@ -59,7 +60,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (user != nil) {
             // if we have a user, set the TabBarController to be the initial view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            startViewController = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+            //startViewController = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+            startViewController = storyboard.instantiateViewControllerWithIdentifier("NavigationController") as! UINavigationController
         } else {
             // Otherwise set the LoginViewController to be the first
             let loginViewController = PFLogInViewController()

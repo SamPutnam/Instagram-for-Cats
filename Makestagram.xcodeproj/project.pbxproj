@@ -30,6 +30,11 @@
 		62C8C1ED1B06BD6500DC3EA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62C8C1EC1B06BD6500DC3EA7 /* Images.xcassets */; };
 		62C8C1F01B06BD6500DC3EA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C8C1EE1B06BD6500DC3EA7 /* LaunchScreen.xib */; };
 		62C8C1FC1B06BD6500DC3EA7 /* MakestagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C8C1FB1B06BD6500DC3EA7 /* MakestagramTests.swift */; };
+		A965E4FC1D340AAD00641A57 /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965E4FB1D340AAD00641A57 /* ListNotesTableViewCell.swift */; };
+		A965E4FE1D340BDD00641A57 /* DisplayNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965E4FD1D340BDD00641A57 /* DisplayNoteViewController.swift */; };
+		A965E5001D340D0200641A57 /* ListNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965E4FF1D340D0200641A57 /* ListNotesTableViewController.swift */; };
+		A965E5021D340DDB00641A57 /* NSDate+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965E5011D340DDB00641A57 /* NSDate+convertToString.swift */; };
+		A965E5041D340E0F00641A57 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965E5031D340E0F00641A57 /* RealmHelper.swift */; };
 		A9D1FF721D2449E5006E5CFE /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1FF711D2449E5006E5CFE /* TimelineViewController.swift */; };
 		A9D1FF741D2449FA006E5CFE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1FF731D2449FA006E5CFE /* PhotoViewController.swift */; };
 		A9D1FF761D244A08006E5CFE /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1FF751D244A08006E5CFE /* FriendSearchViewController.swift */; };
@@ -100,6 +105,11 @@
 		8E9C3D52AC2239033ABA510A /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 		9A98CED7E3ED5AF4F4A48528 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
 		A7E180F5B60BB4326E12C66A /* Pods-MakestagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakestagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakestagramTests/Pods-MakestagramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A965E4FB1D340AAD00641A57 /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewCell.swift; sourceTree = "<group>"; };
+		A965E4FD1D340BDD00641A57 /* DisplayNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayNoteViewController.swift; sourceTree = "<group>"; };
+		A965E4FF1D340D0200641A57 /* ListNotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewController.swift; sourceTree = "<group>"; };
+		A965E5011D340DDB00641A57 /* NSDate+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+convertToString.swift"; path = "Extensions/NSDate+convertToString.swift"; sourceTree = "<group>"; };
+		A965E5031D340E0F00641A57 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		A9D1FF711D2449E5006E5CFE /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		A9D1FF731D2449FA006E5CFE /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = FilterViewController/PhotoViewController.swift; sourceTree = "<group>"; };
 		A9D1FF751D244A08006E5CFE /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +189,8 @@
 				A9D1FF731D2449FA006E5CFE /* PhotoViewController.swift */,
 				A9D1FF711D2449E5006E5CFE /* TimelineViewController.swift */,
 				A9D1FF751D244A08006E5CFE /* FriendSearchViewController.swift */,
+				A965E4FD1D340BDD00641A57 /* DisplayNoteViewController.swift */,
+				A965E4FF1D340D0200641A57 /* ListNotesTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -213,6 +225,7 @@
 				6277189D1B0A58E800AF5C6E /* ErrorHandling.swift */,
 				6277189E1B0A58E800AF5C6E /* ParseLoginHelper.swift */,
 				A9D1FF861D26E006006E5CFE /* ParseHelper.swift */,
+				A965E5031D340E0F00641A57 /* RealmHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -251,6 +264,7 @@
 				62C8C1EE1B06BD6500DC3EA7 /* LaunchScreen.xib */,
 				62C8C1E31B06BD6500DC3EA7 /* Supporting Files */,
 				62A07D671B1F7A0E001F6916 /* Makestagram-Bridging-Header.h */,
+				A965E5011D340DDB00641A57 /* NSDate+convertToString.swift */,
 			);
 			path = Makestagram;
 			sourceTree = "<group>";
@@ -302,6 +316,7 @@
 			children = (
 				A9D1FF881D283879006E5CFE /* FriendSearch */,
 				A9D1FF831D26DADA006E5CFE /* Timeline */,
+				A965E4FB1D340AAD00641A57 /* ListNotesTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -535,18 +550,23 @@
 				A9D1FF7F1D25736F006E5CFE /* Post.swift in Sources */,
 				A9D1FF761D244A08006E5CFE /* FriendSearchViewController.swift in Sources */,
 				627718A01B0A58E800AF5C6E /* ParseLoginHelper.swift in Sources */,
+				A965E5041D340E0F00641A57 /* RealmHelper.swift in Sources */,
 				627718911B0A581700AF5C6E /* FilterCollectionViewCell.swift in Sources */,
 				6277189F1B0A58E800AF5C6E /* ErrorHandling.swift in Sources */,
 				A9D1FF721D2449E5006E5CFE /* TimelineViewController.swift in Sources */,
 				A9D1FF7C1D2555D5006E5CFE /* PhotoTakingHelper.swift in Sources */,
 				A9D1FF741D2449FA006E5CFE /* PhotoViewController.swift in Sources */,
 				A9D1FF8C1D2838D1006E5CFE /* FriendSearchTableViewCell.swift in Sources */,
+				A965E5001D340D0200641A57 /* ListNotesTableViewController.swift in Sources */,
 				62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */,
 				A9D1FF901D302A04006E5CFE /* Note.swift in Sources */,
 				A9D1FF8E1D29B986006E5CFE /* PostSectionHeaderView.swift in Sources */,
 				627718971B0A581700AF5C6E /* FilterViewController.swift in Sources */,
 				A9D1FF871D26E006006E5CFE /* ParseHelper.swift in Sources */,
+				A965E5021D340DDB00641A57 /* NSDate+convertToString.swift in Sources */,
+				A965E4FE1D340BDD00641A57 /* DisplayNoteViewController.swift in Sources */,
 				A9D1FF851D26DAF4006E5CFE /* PostTableViewCell.swift in Sources */,
+				A965E4FC1D340AAD00641A57 /* ListNotesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
