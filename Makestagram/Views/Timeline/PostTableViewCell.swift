@@ -17,7 +17,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var moreButton: UIButton!
-    @IBOutlet weak var postContentTextView: UITextView!
+    @IBOutlet weak var postCaptionLabel: UILabel!
    
     var postDisposable: DisposableType?
     var likeDisposable: DisposableType?
@@ -39,12 +39,12 @@ class PostTableViewCell: UITableViewCell {
                         self.likesLabel.text = self.stringFromUserList(value)
                         self.likeButton.selected = value.contains(PFUser.currentUser()!)
                         self.likesIconImageView.hidden = (value.count == 0)
-                        self.postContentTextView.text = self.post?.content
+                        self.postCaptionLabel.text = "self.post?.caption"
                     } else {
                         self.likesLabel.text = ""
                         self.likeButton.selected = false
                         self.likesIconImageView.hidden = true
-                        self.postContentTextView.hidden = true
+                        self.postCaptionLabel.hidden = true
                     }
                 }
             }

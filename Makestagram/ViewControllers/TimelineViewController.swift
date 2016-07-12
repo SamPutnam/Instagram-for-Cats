@@ -17,6 +17,7 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     var defaultRange = 0...4
     let additionalRangeSize = 5
     var timelineComponent: TimelineComponent<Post, TimelineViewController>!
+    var note: Note?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +40,10 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
         photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
             let post = Post()
             post.image.value = image
+            post.caption = "string"
             post.uploadPost()
             self.showCaptionActionSheetForPost(post)
+            
         }
     }
 
@@ -56,7 +59,19 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
             completionBlock(posts)
         }
     }
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            if identifier == "newCaption" {
+                let displayNoteViewController = segue.destinationViewController as! DisplayNoteViewController
+                
+            }
+            if identifier == "chooseFromNotes" {
+                let listNotesTableViewController = segue.destinationViewController as! ListNotesTableViewController
+               
+            }
+            
+        }
+    }
     // MARK: UIActionSheets
     
     func showCaptionActionSheetForPost(post: Post){
@@ -65,13 +80,12 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         alertController.addAction(cancelAction)
         
-        let newCaptionAction = UIAlertAction(title: "Choose new caption", style: .Default) { (action) in
-        
+        let newCaptionAction = UIAlertAction(title: "New caption", style: .Default) { (action) in
+        self.performSegueWithIdentifier("newCaption", sender: self)
         }
         alertController.addAction(newCaptionAction)
         
-        let captionFromNotesAction = UIAlertAction(title: "Choose caption from notes", style: .Default) { (action) in
-        
+        let captionFromNotesAction = UIAlertAction(title: "Caption from notes", style: .Default) { (action) in self.performSegueWithIdentifier("captionFromNotes", sender: self)
         }
         alertController.addAction(captionFromNotesAction)
         
@@ -155,7 +169,6 @@ extension TimelineViewController : UITableViewDataSource {
         post.downloadImage()
         post.fetchLikes()
         cell.post = post
-        
         cell.timeline = self
         
         return cell

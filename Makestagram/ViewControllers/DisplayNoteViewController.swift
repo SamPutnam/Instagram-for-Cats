@@ -10,8 +10,11 @@ import UIKit
 import RealmSwift
 
 class DisplayNoteViewController: UIViewController {
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var noteTitleTextField: UITextField!
     var note: Note?
+    var post: Post?
     
     @IBOutlet weak var noteContentTextView: UITextView!
     override func viewDidLoad() {
@@ -41,18 +44,47 @@ class DisplayNoteViewController: UIViewController {
             }
         }
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        if let note = note {
+        if isModal() == true {
+            saveButton.hidden = false
+            cancelButton.hidden = false
+        }
+        else {
+            saveButton.hidden = true
+            cancelButton.hidden = true
+        }
+
+            if let note = note {
             noteTitleTextField.text = note.title
             noteContentTextView.text = note.content
-        }
-        else {noteTitleTextField.text = ""
+            }
+            else {noteTitleTextField.text = ""
             noteContentTextView.text = ""
+            }
+    }
+    
+
+    func isModal() -> Bool {
+        // this is the opposite of the expected behavior, but it works
+        if self.presentingViewController!.presentingViewController == navigationController {
+            return true
         }
+        return false
+    }
+    @IBAction func saveButton(sender: AnyObject) {
+        let note = Note()
+        note.title = noteTitleTextField.text ?? ""
+        note.content = noteContentTextView.text ?? ""
+        note.modificationTime = NSDate()
+        RealmHelper.addNote(note)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-
-
+    @IBAction func cancelButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
