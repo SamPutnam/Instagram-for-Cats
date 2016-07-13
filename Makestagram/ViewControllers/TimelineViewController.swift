@@ -40,13 +40,11 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
         photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
             let post = Post()
             post.image.value = image
-            post.caption = "string"
             post.uploadPost()
+            //post.caption = "string"
             self.showCaptionActionSheetForPost(post)
-            
         }
     }
-
 
     func loadInRange(range: Range<Int>, completionBlock: ([Post]?) -> Void) {
         

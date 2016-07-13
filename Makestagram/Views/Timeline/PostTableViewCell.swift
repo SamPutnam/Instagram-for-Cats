@@ -33,18 +33,18 @@ class PostTableViewCell: UITableViewCell {
                 oldValue.image.value = nil
             }
             if let post = post {
+                postCaptionLabel.text = post.caption
                 postDisposable = post.image.bindTo(postImageView.bnd_image)
                 likeDisposable = post.likes.observe { (value: [PFUser]?) -> () in
                     if let value = value {
                         self.likesLabel.text = self.stringFromUserList(value)
                         self.likeButton.selected = value.contains(PFUser.currentUser()!)
                         self.likesIconImageView.hidden = (value.count == 0)
-                        self.postCaptionLabel.text = "self.post?.caption"
                     } else {
                         self.likesLabel.text = ""
                         self.likeButton.selected = false
                         self.likesIconImageView.hidden = true
-                        self.postCaptionLabel.hidden = true
+                      //self.postCaptionLabel.text = ""
                     }
                 }
             }

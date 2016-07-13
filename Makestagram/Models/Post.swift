@@ -15,7 +15,7 @@ import ConvenienceKit
 
 class Post: PFObject, PFSubclassing {
 
-    dynamic var caption = ""
+    @NSManaged dynamic var caption : String
     var image : Observable<UIImage?> = Observable(nil)
     var likes : Observable<[PFUser]?> = Observable(nil)
     var photoUploadTask : UIBackgroundTaskIdentifier?

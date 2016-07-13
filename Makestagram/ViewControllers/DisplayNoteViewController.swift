@@ -22,25 +22,30 @@ class DisplayNoteViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let listNotesTableViewController = segue.destinationViewController as! ListNotesTableViewController
         if let identifier = segue.identifier {
             if identifier == "Cancel" {
+                  let listNotesTableViewController = segue.destinationViewController as! ListNotesTableViewController
                 print("Cancel button tapped")
-            } else if identifier == "Save" {
+                listNotesTableViewController.notes = RealmHelper.retrieveNotes()
+            } else if identifier == "saveChosenCaption" {
+                  let timelineViewController = segue.destinationViewController as! TimelineViewController
                 print("Save button tapped")
                 if let note = note {
                     let newNote = Note()
                     newNote.title = noteTitleTextField.text ?? ""
                     newNote.content = noteContentTextView.text ?? ""
                     RealmHelper.updateNote(note, newNote: newNote)
+                    let post = Post()
+                    post.caption = noteContentTextView.text ?? ""
                 } else {
                     let note = Note()
                     note.title = noteTitleTextField.text ?? ""
                     note.content = noteContentTextView.text ?? ""
                     note.modificationTime = NSDate()
                     RealmHelper.addNote(note)
+                    let post = Post()
+                    post.caption = noteContentTextView.text ?? ""
                 }
-                listNotesTableViewController.notes = RealmHelper.retrieveNotes()
             }
         }
     }
@@ -81,6 +86,8 @@ class DisplayNoteViewController: UIViewController {
         note.content = noteContentTextView.text ?? ""
         note.modificationTime = NSDate()
         RealmHelper.addNote(note)
+        let post = Post()
+        post.caption = noteContentTextView.text ?? ""
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
