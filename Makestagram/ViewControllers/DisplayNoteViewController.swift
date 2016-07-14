@@ -9,11 +9,14 @@
 import UIKit
 import RealmSwift
 
+
+
 class DisplayNoteViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var noteTitleTextField: UITextField!
     var note: Note?
+    var delegate: CaptionReceiverDelegate?
     var post: Post?
     
     @IBOutlet weak var noteContentTextView: UITextView!
@@ -35,16 +38,18 @@ class DisplayNoteViewController: UIViewController {
                     newNote.title = noteTitleTextField.text ?? ""
                     newNote.content = noteContentTextView.text ?? ""
                     RealmHelper.updateNote(note, newNote: newNote)
-                    let post = Post()
-                    post.caption = noteContentTextView.text ?? ""
+                    if let delegate = delegate {
+                    delegate.captionChosen(noteContentTextView.text ?? "")
+                    }
                 } else {
                     let note = Note()
                     note.title = noteTitleTextField.text ?? ""
                     note.content = noteContentTextView.text ?? ""
                     note.modificationTime = NSDate()
                     RealmHelper.addNote(note)
-                    let post = Post()
-                    post.caption = noteContentTextView.text ?? ""
+                    if let delegate = delegate {
+                        delegate.captionChosen(noteContentTextView.text ?? "")
+                    }
                 }
             }
         }
@@ -86,8 +91,9 @@ class DisplayNoteViewController: UIViewController {
         note.content = noteContentTextView.text ?? ""
         note.modificationTime = NSDate()
         RealmHelper.addNote(note)
-        let post = Post()
-        post.caption = noteContentTextView.text ?? ""
+        if let delegate = delegate {
+            delegate.captionChosen(noteContentTextView.text ?? "")
+        }
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 

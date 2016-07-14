@@ -10,6 +10,11 @@ import UIKit
 import Parse
 import ConvenienceKit
 
+protocol CaptionReceiverDelegate {
+    func captionChosen(caption: String)
+    
+}
+
 class TimelineViewController: UIViewController, TimelineComponentTarget {
 
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +23,7 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     let additionalRangeSize = 5
     var timelineComponent: TimelineComponent<Post, TimelineViewController>!
     var note: Note?
+    var post: Post?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +44,9 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     func takePhoto() {
         // Instantiate photo taking class, provide callback for when photo is selected
         photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
-            let post = Post()
-            post.image.value = image
-            post.uploadPost()
-            //post.caption = "string"
-            self.showCaptionActionSheetForPost(post)
+            self.post = Post()
+            self.post!.image.value = image
+            self.showCaptionActionSheetForPost(self.post!)
         }
     }
 
@@ -61,15 +65,21 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
         if let identifier = segue.identifier {
             if identifier == "newCaption" {
                 let displayNoteViewController = segue.destinationViewController as! DisplayNoteViewController
+                displayNoteViewController.delegate = self
                 
             }
-            if identifier == "chooseFromNotes" {
-                let listNotesTableViewController = segue.destinationViewController as! ListNotesTableViewController
+            if identifier == "captionFromNotes" {
+                let navigationController = segue.destinationViewController as! UINavigationController
+                let listNotesTableViewController = navigationController.viewControllers.first as! ListNotesTableViewController
+                listNotesTableViewController.delegate = self
                
             }
             
         }
     }
+    
+    
+    
     // MARK: UIActionSheets
     
     func showCaptionActionSheetForPost(post: Post){
@@ -170,6 +180,13 @@ extension TimelineViewController : UITableViewDataSource {
         cell.timeline = self
         
         return cell
+    }
+}
+
+extension TimelineViewController : CaptionReceiverDelegate {
+    func captionChosen(caption: String){
+        post?.caption = caption
+        self.post!.uploadPost()
     }
 }
 

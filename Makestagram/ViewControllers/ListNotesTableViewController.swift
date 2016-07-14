@@ -11,6 +11,7 @@ import RealmSwift
 
 class ListNotesTableViewController: UITableViewController {
     
+    var delegate: CaptionReceiverDelegate?
     var notes : Results<Note>!{
         didSet{
             tableView.reloadData()
@@ -60,9 +61,12 @@ class ListNotesTableViewController: UITableViewController {
                 let note = notes[indexPath.row]
                 let displayNoteViewController = segue.destinationViewController as! DisplayNoteViewController
                 displayNoteViewController.note = note
+                displayNoteViewController.delegate = self.delegate
             }
             else if identifier == "addNote" {
                 print("+ button tapped")
+                let displayNoteViewController = segue.destinationViewController as! DisplayNoteViewController
+                displayNoteViewController.delegate = self.delegate
             }
         }
     }
