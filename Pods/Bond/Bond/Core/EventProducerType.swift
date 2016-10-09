@@ -45,7 +45,7 @@ public extension EventProducerType {
     var skip: Int = replayLength
     return observe { value in
       if skip > 0 {
-        skip--
+        skip -= 1
       } else {
         observer(value)
       }
@@ -129,7 +129,7 @@ public extension EventProducerType {
     return EventProducer(replayLength: max(replayLength - count, 0)) { sink in
       return observe { event in
         if count > 0 {
-          count--
+          count -= 1
         } else {
           sink(event)
         }

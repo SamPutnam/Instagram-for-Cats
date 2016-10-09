@@ -24,7 +24,7 @@
 
 /// Abstraction over a type that can be used to encapsulate an array and observe its (incremental) changes.
 public protocol ObservableArrayType {
-  typealias ElementType
+  associatedtype ElementType
   var array: [ElementType] { get }
 }
 
@@ -225,7 +225,7 @@ public struct ObservableArrayGenerator<ElementType>: GeneratorType {
   }
   
   public mutating func next() -> ElementType? {
-    index++
+    index += 1
     return index < array.count ? array[index] : nil
   }
 }

@@ -35,6 +35,8 @@
 		A965E5001D340D0200641A57 /* ListNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965E4FF1D340D0200641A57 /* ListNotesTableViewController.swift */; };
 		A965E5021D340DDB00641A57 /* NSDate+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965E5011D340DDB00641A57 /* NSDate+convertToString.swift */; };
 		A965E5041D340E0F00641A57 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965E5031D340E0F00641A57 /* RealmHelper.swift */; };
+		A9A5B40E1D380F2C00BC60B6 /* MyLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A5B40D1D380F2B00BC60B6 /* MyLogInViewController.swift */; };
+		A9A5B4101D380F5200BC60B6 /* MySignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A5B40F1D380F5200BC60B6 /* MySignUpViewController.swift */; };
 		A9D1FF721D2449E5006E5CFE /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1FF711D2449E5006E5CFE /* TimelineViewController.swift */; };
 		A9D1FF741D2449FA006E5CFE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1FF731D2449FA006E5CFE /* PhotoViewController.swift */; };
 		A9D1FF761D244A08006E5CFE /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1FF751D244A08006E5CFE /* FriendSearchViewController.swift */; };
@@ -110,6 +112,8 @@
 		A965E4FF1D340D0200641A57 /* ListNotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewController.swift; sourceTree = "<group>"; };
 		A965E5011D340DDB00641A57 /* NSDate+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+convertToString.swift"; path = "Extensions/NSDate+convertToString.swift"; sourceTree = "<group>"; };
 		A965E5031D340E0F00641A57 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		A9A5B40D1D380F2B00BC60B6 /* MyLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLogInViewController.swift; sourceTree = "<group>"; };
+		A9A5B40F1D380F5200BC60B6 /* MySignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySignUpViewController.swift; sourceTree = "<group>"; };
 		A9D1FF711D2449E5006E5CFE /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		A9D1FF731D2449FA006E5CFE /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = FilterViewController/PhotoViewController.swift; sourceTree = "<group>"; };
 		A9D1FF751D244A08006E5CFE /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				A9D1FF751D244A08006E5CFE /* FriendSearchViewController.swift */,
 				A965E4FD1D340BDD00641A57 /* DisplayNoteViewController.swift */,
 				A965E4FF1D340D0200641A57 /* ListNotesTableViewController.swift */,
+				A9A5B40D1D380F2B00BC60B6 /* MyLogInViewController.swift */,
+				A9A5B40F1D380F5200BC60B6 /* MySignUpViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -396,9 +402,13 @@
 				TargetAttributes = {
 					62C8C1DF1B06BD6500DC3EA7 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = Q5UUL75AF4;
+						LastSwiftMigration = 0800;
 					};
 					62C8C1F41B06BD6500DC3EA7 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = Q5UUL75AF4;
+						LastSwiftMigration = 0800;
 						TestTargetID = 62C8C1DF1B06BD6500DC3EA7;
 					};
 				};
@@ -560,11 +570,13 @@
 				A965E5001D340D0200641A57 /* ListNotesTableViewController.swift in Sources */,
 				62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */,
 				A9D1FF901D302A04006E5CFE /* Note.swift in Sources */,
+				A9A5B40E1D380F2C00BC60B6 /* MyLogInViewController.swift in Sources */,
 				A9D1FF8E1D29B986006E5CFE /* PostSectionHeaderView.swift in Sources */,
 				627718971B0A581700AF5C6E /* FilterViewController.swift in Sources */,
 				A9D1FF871D26E006006E5CFE /* ParseHelper.swift in Sources */,
 				A965E5021D340DDB00641A57 /* NSDate+convertToString.swift in Sources */,
 				A965E4FE1D340BDD00641A57 /* DisplayNoteViewController.swift in Sources */,
+				A9A5B4101D380F5200BC60B6 /* MySignUpViewController.swift in Sources */,
 				A9D1FF851D26DAF4006E5CFE /* PostTableViewCell.swift in Sources */,
 				A965E4FC1D340AAD00641A57 /* ListNotesTableViewCell.swift in Sources */,
 			);
@@ -698,6 +710,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = Q5UUL75AF4;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -707,10 +720,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samputnam.Makestagram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.samputnam.Wings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Makestagram/Makestagram-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -720,6 +735,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = Q5UUL75AF4;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -729,9 +745,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samputnam.Makestagram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.samputnam.Wings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Makestagram/Makestagram-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -740,6 +758,7 @@
 			baseConfigurationReference = A7E180F5B60BB4326E12C66A /* Pods-MakestagramTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Q5UUL75AF4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -752,6 +771,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Make-School.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Makestagram.app/Makestagram";
 			};
 			name = Debug;
@@ -761,6 +781,7 @@
 			baseConfigurationReference = B70AC4238EF53D0F6737E778 /* Pods-MakestagramTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Q5UUL75AF4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -769,6 +790,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Make-School.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Makestagram.app/Makestagram";
 			};
 			name = Release;

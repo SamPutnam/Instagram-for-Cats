@@ -24,12 +24,12 @@ public class TextView : UITextView {
   
   private func initialize() {
     NSNotificationCenter.defaultCenter().addObserver(self,
-      selector: "textViewDidBeginEditing:",
+      selector: #selector(UITextViewDelegate.textViewDidBeginEditing(_:)),
       name: UITextViewTextDidBeginEditingNotification,
       object: self)
     
     NSNotificationCenter.defaultCenter().addObserver(self,
-      selector: "textViewDidEndEditing:",
+      selector: #selector(UITextViewDelegate.textViewDidEndEditing(_:)),
       name: UITextViewTextDidEndEditingNotification,
       object: self)
   }
@@ -40,7 +40,7 @@ public class TextView : UITextView {
   
   override public var text: String! {
     didSet {
-      if let text = text where text == "" {
+      if let text = text   where text == "" {
         if (showsPlaceholderText == nil) {
           showsPlaceholderText = true
         }
@@ -55,7 +55,7 @@ public class TextView : UITextView {
   public var textValue:String {
     get {
       if let showsPlaceholderText = showsPlaceholderText
-        where showsPlaceholderText == true {
+          where showsPlaceholderText == true {
           return ""
       } else {
         return text
@@ -84,7 +84,7 @@ public class TextView : UITextView {
   
   public func textViewDidBeginEditing(notification: NSNotification) {
     if let showsPlaceholderText = showsPlaceholderText
-      where showsPlaceholderText == true {
+        where showsPlaceholderText == true {
         self.showsPlaceholderText = false
         text = ""
     }

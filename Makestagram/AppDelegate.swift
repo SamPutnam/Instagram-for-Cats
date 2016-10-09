@@ -65,12 +65,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //startViewController = storyboard.instantiateViewControllerWithIdentifier("NavigationController") as! UINavigationController
         } else {
             // Otherwise set the LoginViewController to be the first
-            let loginViewController = PFLogInViewController()
-            loginViewController.fields = [.UsernameAndPassword, .LogInButton, .SignUpButton, .Facebook]
-            loginViewController.delegate = parseLoginHelper
-            loginViewController.signUpController?.delegate = parseLoginHelper
-            
-            startViewController = loginViewController
+//            let logInViewController = PFLogInViewController()
+            let logInViewController = MyLogInViewController()
+       logInViewController.signUpController = MySignUpViewController()
+            logInViewController.fields = [.UsernameAndPassword, .LogInButton, .SignUpButton, .Facebook]
+            logInViewController.delegate = parseLoginHelper
+            logInViewController.signUpController?.delegate = parseLoginHelper
+            startViewController = logInViewController
         }
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)

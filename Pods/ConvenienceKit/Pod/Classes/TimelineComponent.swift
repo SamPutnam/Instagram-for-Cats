@@ -13,7 +13,7 @@ This protocol needs to be implemented by any class that wants to be the target
 of the Timeline Component.
 */
 public protocol TimelineComponentTarget: class {
-  typealias ContentType
+  associatedtype ContentType
   
   /// Defines the range of the timeline that gets loaded initially.
   var defaultRange: Range<Int> { get }
@@ -78,7 +78,7 @@ public class TimelineComponent <T: Equatable, S: TimelineComponentTarget where S
     
     targetTrampoline = TargetTrampoline(target: self)
     
-    refreshControl.addTarget(targetTrampoline, action: "refresh:", forControlEvents: .ValueChanged)
+    refreshControl.addTarget(targetTrampoline, action: #selector(TargetTrampoline.refresh(_:)), forControlEvents: .ValueChanged)
   }
   
   /**

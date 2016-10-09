@@ -24,7 +24,7 @@ func applyFilter(filter: CIFilter, toImage image: UIImage) -> UIImage {
 
     let cgimg = context.createCGImage(filter.outputImage!, fromRect: filter.outputImage!.extent)
 
-    return UIImage(CGImage: cgimg, scale: originalScale, orientation: originalOrientation)
+    return UIImage(CGImage: cgimg!, scale: originalScale, orientation: originalOrientation)
 }
 
 func sepiaFilter(image: UIImage) -> UIImage {
