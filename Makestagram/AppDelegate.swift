@@ -51,6 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         acl.publicReadAccess = true
         PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
 
+        // bools are false by default
+        if !NSUserDefaults.standardUserDefaults().boolForKey("TermsAccepted") {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "TermsAccepted")
+        }
+        
         // Initialize Facebook
         
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
@@ -63,6 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             startViewController = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
             //startViewController = storyboard.instantiateViewControllerWithIdentifier("NavigationController") as! UINavigationController
+            
         } else {
             // Otherwise set the LoginViewController to be the first
 //            let logInViewController = PFLogInViewController()

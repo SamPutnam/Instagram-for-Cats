@@ -58,7 +58,7 @@
                                         <rect key="frame" x="0.0" y="28" width="560" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BtH-yV-n8W" id="Bdi-b3-kLR">
-                                            <frame key="frameInset" width="560" height="49.5"/>
+                                            <frame key="frameInset" width="560" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6L-Ei-YPO">
@@ -283,11 +283,12 @@
                         <outlet property="tableView" destination="ZSz-kn-MTU" id="dgo-UO-f7P"/>
                         <segue destination="UuU-ht-IOc" kind="show" identifier="captionFromNotes" id="6zO-S1-QGg"/>
                         <segue destination="mIU-S1-LnQ" kind="presentation" identifier="newCaption" id="eNN-nG-Em3"/>
+                        <segue destination="njH-CS-cFX" kind="presentation" identifier="showTermsPage" id="eda-Nz-9xO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIi-01-G94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472" y="-731"/>
+            <point key="canvasLocation" x="444" y="-716"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CCu-nE-33s">
@@ -321,7 +322,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e5G-wG-mNh" id="Du3-q9-QAa">
-                                    <frame key="frameInset" width="375" height="59.5"/>
+                                    <frame key="frameInset" width="375" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sV-mI-8BM">
@@ -454,6 +455,75 @@
             </objects>
             <point key="canvasLocation" x="2159" y="-301"/>
         </scene>
+        <!--Terms-->
+        <scene sceneID="MiI-Zi-R79">
+            <objects>
+                <viewController id="njH-CS-cFX" customClass="Terms" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V2Q-iW-qQh"/>
+                        <viewControllerLayoutGuide type="bottom" id="VIt-4r-Q2p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="haN-tK-3NA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v6V-Yc-8HY">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">
+Wings App End User License Agreement:
+This End User License Agreement (“Agreement”) is between you and Wings and governs use of this app made available through the Apple App Store. By installing the Wngs App, you agree to be bound by this Agreement and understand that there is no tolerance for objectionable content. If you do not agree with the terms and conditions of this Agreement, you are not entitled to use the Wings App.
+
+In order to ensure Wings provides the best experience possible for everyone, we strongly enforce a no tolerance policy for objectionable content. If you see inappropriate content, please use the "Flag post" feature found under each post.
+
+1. Parties: This Agreement is between you and Wings only, and not Apple, Inc. (“Apple”). Notwithstanding the foregoing, you acknowledge that Apple and its subsidiaries are third party beneficiaries of this Agreement and Apple has the right to enforce this Agreement against you. Wings, not Apple, is solely responsible for the Wings App and its content.
+
+2. Privacy: Wings may collect and use information about your usage of the App Name App, including certain types of information from and about your device. App Name may use this information, as long as it is in a form that does not personally identify you, to measure the use and performance of the Wings App.
+
+3. Limited License: Wings grants you a limited, non-exclusive, non-transferable, revocable license to use theApp Name App for your personal, non-commercial purposes. You may only use the Wings App on Apple devices that you own or control and as permitted by the App Store Terms of Service.
+
+4. Age Restrictions: By using the Wings App, you represent and warrant that (a) you are 17 years of age or older and you agree to be bound by this Agreement; (b) if you are under 17 years of age, you have obtained verifiable consent from a parent or legal guardian; and (c) your use of the Wings App does not violate any applicable law or regulation. Your access to the Wings App may be terminated without warning if Wings believes, in its sole discretion, that you are under the age of 17 years and have not obtained verifiable consent from a parent or legal guardian. If you are a parent or legal guardian and you provide your consent to your child's use of the Wings App, you agree to be bound by this Agreement in respect to your child's use of the Wings App.
+
+5. Objectionable Content Policy: Content may not be submitted to Wings, who will moderate all content and ultimately decide whether or not to post a submission to the extent such content includes, is in conjunction with, or alongside any, Objectionable Content. Objectionable Content includes, but is not limited to: (i) sexually explicit materials; (ii) obscene, defamatory, libelous, slanderous, violent and/or unlawful content or profanity; (iii) content that infringes upon the rights of any third party, including copyright, trademark, privacy, publicity or other personal or proprietary right, or that is deceptive or fraudulent; (iv) content that promotes the use or sale of illegal or regulated substances, tobacco products, ammunition and/or firearms; and (v) gambling, including without limitation, any online casino, sports books, bingo or poker.
+
+6. Warranty: Wings disclaims all warranties about the Wings App to the fullest extent permitted by law. To the extent any warranty exists under law that cannot be disclaimed, Wings, not Apple, shall be solely responsible for such warranty.
+
+7. Maintenance and Support: Wings does provide minimal maintenance or support for it but not to the extent that any maintenance or support is required by applicable law, Wings, not Apple, shall be obligated to furnish any such maintenance or support.
+
+8. Product Claims: Wings, not Apple, is responsible for addressing any claims by you relating to the Wings App or use of it, including, but not limited to: (i) any product liability claim; (ii) any claim that the Wings App fails to conform to any applicable legal or regulatory requirement; and (iii) any claim arising under consumer protection or similar legislation. Nothing in this Agreement shall be deemed an admission that you may have such claims.
+
+9. Third Party Intellectual Property Claims: Wings shall not be obligated to indemnify or defend you with respect to any third party claim arising out or relating to the Wings App. To the extent Wings is required to provide indemnification by applicable law, Wings, not Apple, shall be solely responsible for the investigation, defense, settlement and discharge of any claim that the Wings App or your use of it infringes any third party intellectual property right.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSC-9S-DKm">
+                                <state key="normal" title="I Accept the Terms"/>
+                                <connections>
+                                    <action selector="acceptButton:" destination="njH-CS-cFX" eventType="touchUpInside" id="a6R-MP-wSz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dSC-9S-DKm" firstAttribute="top" secondItem="v6V-Yc-8HY" secondAttribute="bottom" constant="19" id="0lm-7t-8hF"/>
+                            <constraint firstItem="v6V-Yc-8HY" firstAttribute="top" secondItem="haN-tK-3NA" secondAttribute="top" id="47A-Vl-Orm"/>
+                            <constraint firstItem="VIt-4r-Q2p" firstAttribute="top" secondItem="dSC-9S-DKm" secondAttribute="bottom" constant="20" id="8fv-gM-J21"/>
+                            <constraint firstAttribute="trailing" secondItem="v6V-Yc-8HY" secondAttribute="trailing" id="DTm-dy-FAJ"/>
+                            <constraint firstItem="dSC-9S-DKm" firstAttribute="top" secondItem="v6V-Yc-8HY" secondAttribute="bottom" constant="19" id="IMJ-mg-alt"/>
+                            <constraint firstItem="v6V-Yc-8HY" firstAttribute="leading" secondItem="haN-tK-3NA" secondAttribute="leading" id="S6v-Rk-Crm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dSC-9S-DKm" secondAttribute="trailing" constant="50" id="tNp-BG-190"/>
+                            <constraint firstItem="dSC-9S-DKm" firstAttribute="leading" secondItem="haN-tK-3NA" secondAttribute="leadingMargin" constant="50" id="yFg-zr-7e6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accceptButton" destination="dSC-9S-DKm" id="VzS-cz-GWv"/>
+                        <outlet property="termsTextView" destination="v6V-Yc-8HY" id="GRP-O6-qie"/>
+                        <segue destination="CeE-t1-buj" kind="custom" identifier="acceptTerms" customClass="DismissSegue" id="Swx-0a-M3o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsG-xr-hJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256.8" y="-1629.5352323838083"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="e50-TQ-kcA">
             <objects>
@@ -470,7 +540,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcr-xw-KJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257" y="-731"/>
+            <point key="canvasLocation" x="1410" y="-773"/>
         </scene>
     </scenes>
     <resources>
@@ -485,7 +555,7 @@
         <image name="people" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="G8v-p0-SKZ"/>
+        <segue reference="Swx-0a-M3o"/>
         <segue reference="eNN-nG-Em3"/>
     </inferredMetricsTieBreakers>
 </document>

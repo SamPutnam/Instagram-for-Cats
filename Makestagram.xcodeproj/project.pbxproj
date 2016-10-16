@@ -49,6 +49,7 @@
 		A9D1FF901D302A04006E5CFE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1FF8F1D302A04006E5CFE /* Note.swift */; };
 		A9D1FF971D302C7F006E5CFE /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D1FF951D302C7F006E5CFE /* Realm.framework */; };
 		A9D1FF981D302C7F006E5CFE /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D1FF961D302C7F006E5CFE /* RealmSwift.framework */; };
+		A9F357FD1DB079D00017F860 /* Terms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F357FC1DB079D00017F860 /* Terms.swift */; };
 		D08E2BEEF25EAA1511AF8C59 /* Pods_MakestagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6755AC39D2D69EC058A62320 /* Pods_MakestagramTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		A9D1FF8F1D302A04006E5CFE /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A9D1FF951D302C7F006E5CFE /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Frameworks/Realm.framework; sourceTree = "<group>"; };
 		A9D1FF961D302C7F006E5CFE /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Frameworks/RealmSwift.framework; sourceTree = "<group>"; };
+		A9F357FC1DB079D00017F860 /* Terms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Terms.swift; path = ../Terms.swift; sourceTree = "<group>"; };
 		B70AC4238EF53D0F6737E778 /* Pods-MakestagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakestagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MakestagramTests/Pods-MakestagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		F31A6A00CA7DAB7B739E365C /* Pods_Makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -197,6 +199,7 @@
 				A965E4FF1D340D0200641A57 /* ListNotesTableViewController.swift */,
 				A9A5B40D1D380F2B00BC60B6 /* MyLogInViewController.swift */,
 				A9A5B40F1D380F5200BC60B6 /* MySignUpViewController.swift */,
+				A9F357FC1DB079D00017F860 /* Terms.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				A9A5B40E1D380F2C00BC60B6 /* MyLogInViewController.swift in Sources */,
 				A9D1FF8E1D29B986006E5CFE /* PostSectionHeaderView.swift in Sources */,
 				627718971B0A581700AF5C6E /* FilterViewController.swift in Sources */,
+				A9F357FD1DB079D00017F860 /* Terms.swift in Sources */,
 				A9D1FF871D26E006006E5CFE /* ParseHelper.swift in Sources */,
 				A965E5021D340DDB00641A57 /* NSDate+convertToString.swift in Sources */,
 				A965E4FE1D340BDD00641A57 /* DisplayNoteViewController.swift in Sources */,

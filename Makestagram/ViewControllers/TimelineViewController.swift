@@ -36,7 +36,14 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+        if NSUserDefaults.standardUserDefaults().boolForKey("TermsAccepted") {
+            // Terms have not been accepted. Show terms (perhaps using performSegueWithIdentifier)
+            self.performSegueWithIdentifier("showTermsPage", sender: self)
+            
+        } else {
+         // Terms have been accepted, proceed as normal   
+        }
+    
         timelineComponent.loadInitialIfRequired()
        
     }
