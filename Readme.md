@@ -1,4 +1,4 @@
-#Wings
+#Instagram for Cats
 
 This is a sharing app for iOS. Users may log in via Facebook or email using Parse. Photos can be taken from the camera or gallery and new or saved captions may be added to photos as they are posted. A search bar allows the user to find and follow or unfollow other users. Photos and captions from other users also appear in the home feed and can be liked, or flagged for removal, the latter being a feature required by the App Store. 
 
